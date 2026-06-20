@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Carrossel MVP</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">MVP local</p>
+        <h1>Gerador de carrossel com IA + Stable Diffusion</h1>
+        <p class="subtitle">Digite o tema, a IA monta os 5 cards e o Stable Diffusion gera fundos consistentes. Depois o app aplica texto e padrao visual.</p>
+      </div>
+      <div class="status" id="status">checando...</div>
+    </section>
+
+    <section class="panel">
+      <label>
+        Tema do carrossel
+        <textarea id="topic" rows="3" placeholder="Ex: 5 erros que pessoas cometem ao limpar teclado mecanico"></textarea>
+      </label>
+
+      <div class="grid-2">
+        <label>
+          Publico
+          <input id="audience" value="publico geral" />
+        </label>
+        <label>
+          Tom
+          <input id="tone" value="direto, util e provocativo" />
+        </label>
+      </div>
+
+      <div class="grid-2">
+        <label>
+          Marca opcional
+          <input id="brand" placeholder="Ex: Luna, VOIICR, Pedro" />
+        </label>
+        <label>
+          Estilo visual opcional
+          <input id="style" placeholder="Ex: fotografia realista, tecnologia, mesa escura, neon discreto" />
+        </label>
+      </div>
+
+      <button id="generate">Gerar 5 imagens</button>
+      <p class="hint" id="hint">Na primeira rodada pode demorar porque o SD precisa gerar 5 imagens em 1080x1350.</p>
+    </section>
+
+    <section class="result" id="result"></section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
